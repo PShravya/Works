@@ -1,0 +1,133 @@
+<html>
+  <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    </head>
+    
+<body>
+    <div class="container" style="background-color:#f2f2f2;margin-top:30px;">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form">
+			<h2 class="btn btn-danger btn-block" style="font-size:25px"><b>REGISTER HERE</b><small></small></h2>
+			<hr class="colorgraph">
+             <div class="form-group">
+				<input type="text" name="policyNumber" id="policy_number" class="form-control input-lg" placeholder="Policy Number" tabindex="3">
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+                    
+					<div class="form-group">
+                        <input type="text" name="firstName" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="text" name="lastName" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+					</div>
+				</div>
+			</div> 
+            
+    
+       
+            <div class="form-group">
+                    <input type='date' name="dateOfBirth" id="DOB"class="form-control input-lg" />
+            </div>
+     
+
+            
+			<div class="form-group">
+				<input type="text" name="addLine1" id="add_line_1" class="form-control input-lg" placeholder="Address Line 1" tabindex="3">
+			</div>
+            
+            <div class="form-group">
+				<input type="text" name="addLine2" id="add_line_2" class="form-control input-lg" placeholder="Address Line 2" tabindex="3">
+			</div>
+            
+            <div class="form-group">
+				<input type="text" name="city" id="City" class="form-control input-lg" placeholder="City" tabindex="3">
+			</div>
+           
+            <div class="form-group">
+            <select class="form-control input-lg" name="state" id="stateID" >
+               
+            </select>
+            </div>
+          
+			
+            <div class="form-group">
+				<input type="email" name="email" id="Email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+			</div>
+            
+            <div class="form-group">
+				<input type="text" name="username" id="Username" class="form-control input-lg" placeholder="Username" tabindex="4">
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="password" id="Password" class="form-control input-lg" placeholder="Password" tabindex="5">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="passwordConfirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-3 col-md-3">
+					<span class="button-checkbox">
+						<button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+					</span>
+				</div>
+				<div class="col-xs-8 col-sm-9 col-md-9">
+					 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+				</div>
+			</div>
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				<div class="col-xs-12 col-md-6"><a href="login.html" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+			</div>
+			<div class="modal-body">
+				<p>The terms and conditions document includes the following provisions:
+
+a licence of the copyright in the website (and restrictions on what may be done with the material on the website);
+a disclaimer of liability;
+a clause governing the use of passwords and restricted areas of the website;
+an acceptable use clause;
+a variation clause;
+an entire agreement clause;
+a clause specifying the applicable law and the jurisdiction in which disputes will be decided; and
+a provision specifying some of the information which needs to be disclosed under the Ecommerce Regulations.
+Please read the notes accompanying the terms and conditions very carefully. You will of course need to adapt the terms to suit your website and business.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+</body>
+    
+</html>

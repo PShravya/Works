@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">    
+<style>
+
+	
+	#outertable,.leftDivision,#rightSecondDiv{
+
+		 border: 1px ridge grey;
+			}
+    
+    #rightDiv {
+        border: 1px ridge grey;
+        padding-top: 1px;
+        height: 50px;
+    }
+
+  #txtparagraph {
+background-color: orange;
+
+  }
+
+  #formBelowDivision {
+
+  	border-style: ridge;
+  	 }
+
+  	 #commentBox {
+
+  	 	font-family: Comic Sans MS;
+
+  	 }
+
+  	 #mainDiv {
+  	 	width: 75%;
+  	 }
+
+  
+  </style>
+    </head>
+    
+    <body>
+    	<div id="mainDiv">
+    	  <table id="outertable" width = 100%>
+    	  	<tr class="border">
+    	  		<td width="35%" >
+				<div id = "formBelowDivision"><p><b><center>Form Below</p></b></center></div>
+
+				<div class="leftDivision">  <form action = "#">
+
+					<label>FirstName</label> 
+					<input type="text"> 
+					<br/>
+					<label>LastName</label> 
+					<input type="text"> 
+					<br/>
+					<br/>
+					<textarea rows="8" cols="30" name="comment" id="commentBox">
+Lets put something as default value</textarea>
+<br/>
+<p> <b>Please select your gender </b></p>
+ Male:<input type="radio" name="gender" value="male" checked> <br>
+ Female: <input type="radio" name="gender" value="female"> <br>
+ Other: <input type="radio" name="gender" value="other"> 
+
+ <fieldset> <legend>Lemme group your personal preferences separately</legend>
+<p><b> I want to know your hobbies </b></p>
+Travelling<input type="checkbox" name="hobbies" value="travel">
+Partying<input type="checkbox" name="hobbies" value="party">
+Reading<input type="checkbox" name="hobbies" value="read"><br />
+
+<p><b> Lets know your current expression</b></p>
+<select class="styled" id="macStyle">
+    <option>Smile</option>
+    <option>Cry</option>
+    <option>Anger</option>
+    <option>Laugh</option>
+    <option>Excited</option>
+</select>
+
+ </fieldset>
+
+<input type = "submit" value="mySubmit">
+				<br />
+				<br />
+                <br />
+                <br />
+               
+                    
+                    
+				</form>
+                </div>
+    	  		</td>
+
+
+
+			<td width="38%">
+				<div id = "rightDiv"><p><b><center>Image and List below</center> </b> </div>
+
+				<div id = "rightSecondDiv">
+
+					<div id = "imageDiv">
+					<img src="keep-calm-and-java-on-1.png" alt="i love java" width=120px height= 158px>
+
+					</div>
+					<br />
+
+					<p id ="txtparagraph">see the list of languages and frameworks as their subcategories.</p>
+					<p>Frameworks also have categories.</p>
+
+					<ul>
+ 					 <li>PHP</li>
+ 					 	<ul style="list-style-type:circle">
+ 					 		<li> YII Framework</li>
+ 					 	</ul>	
+  					<li>Javascript</li>
+  					<ul style="list-style-type:circle">
+ 					 		<li>AngularJS</li>
+ 					 		<li>BackboneJS</li>
+ 					 		<ul style="list-style-type:square">
+ 					 		<li> Marrionettejs</li>
+ 					 		<li>Thorax </li>
+ 					 	</ul>	
+ 					 	</ul>	
+ 					 <li>Python</li>
+ 					 <ul style="list-style-type:circle">
+ 					 		<li>Dijango</li>
+ 					 	</ul>	
+					</ul>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+                    <br />
+					<br />
+                     <br />
+                     <br />
+                    
+				</div>
+			</td>
+    	  	</tr>
+     		</table>
+    		</div>
+   		</body>
+</html>

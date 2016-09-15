@@ -1,0 +1,109 @@
+#page
+{
+
+	background-color:#0099CC; 
+	height:100px;
+	background-image: url("computer-icon.png"), url("Java-icon.png");
+	background-repeat: no-repeat;
+	background-position: 10px, 640px;
+	background-size: 100px 100px;
+	padding-left:20px;
+	padding-top:20px;
+	text-align:top;
+	
+	
+	
+}
+
+#left{
+	float:left;
+	width:300px;
+	padding-top:5px;
+	font-family:arial;
+	background-color:#FF9966;
+	color:#000000;
+	border-bottom-style: solid;
+	border-right-style: solid;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-bottom-color:black;
+	border-right-color:black;
+	border-left-color:black;
+	border-top-color:black;
+	
+}
+
+#sign {
+	
+	background-image: url("login_logo.png");
+	width: 303px ;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-color:#FF9966;
+	background-position:40px;
+	border:2px solid;
+	
+}
+
+
+
+#mainheading
+{
+	
+	
+	color:#FFFFFF;
+	font-size:40px;
+	padding-left:110px; 
+	padding-top: 20px;
+	font-family: georgian;
+	
+	
+}
+
+.img	{
+	float:left;
+	border-left: 1px;
+	border-right:1px;
+	border-top:1px;
+	border-bottom:1px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#CCFFFF
+}
+
+.image	{
+	float:left;
+	background-color:#CCFFFF;
+	padding-right:20px;
+	padding-left:200px;
+	
+}
+
+.image2	{
+	float:left;
+	padding-top:30px;
+	padding-left:200px;
+	background-color:#CCFFFF;
+	padding-right:20px;
+}
+
+.image3 {
+	background-color:#CCFFFF;
+	padding-right:20px;
+	padding-left:545px;
+}
+
+#footer {
+	
+	background-color:#006699;
+	height:80px;
+	color:white;
+	text-align:center;
+	
+	background-image: url("facebook-icon-logo-vector-400x400.png"),url("Twitter_logo_white.png"), url("Dakirby309-Simply-Styled-Gmail.ico");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position:10px, 60px, 110px;
+	
+	
+}
