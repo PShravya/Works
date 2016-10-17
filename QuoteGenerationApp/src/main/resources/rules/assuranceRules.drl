@@ -1,0 +1,176 @@
+//created on: Sep 13, 2016
+package drools;
+
+//list any import classes here.
+import com.assurance.quotegeneration.model.Quote;
+import com.assurance.quotegeneration.model.CustomerVO;
+import java.util.Random;
+import java.util.Calendar;
+
+
+//declare any global variables here
+global Quote quote;
+global org.slf4j.Logger logger
+
+
+
+rule "Rule_1"
+    when 
+    	//eval(true)
+    	eval(true)
+        //conditions
+    then
+    	quote.setQuoteAmount(72.0);
+    	quote.setQuoteId(getQuoteId());
+    	System.out.println("Created new quote" + quote.getQuoteId());
+        //actions
+
+end
+
+rule "Rule by age"
+    //include attributes such as "salience" here...
+    when
+        CustomerVO( age < 25 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 10);
+    	System.out.println(quote.getQuoteAmount() + "//age < 25");
+        //actions
+
+end
+
+rule "Rule by number of claims"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( numOfClaimsOnVehicle != 0 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + ($p.getNumOfClaimsOnVehicle()*10));
+    	System.out.println(quote.getQuoteAmount() + "//by claims on vehicle");
+        //actions
+
+end
+
+rule "Rule by number of point is less than 4"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( points != 0 && points < 4)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 5);
+    	System.out.println(quote.getQuoteAmount() + "//have 4 points ");
+        //actions
+
+end
+
+rule "Rule by number of point is 4-7"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( points != 0 && points >= 4 && points <= 7)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 10);
+    	System.out.println(quote.getQuoteAmount() + "// points between 4 and 7 ");
+        //actions
+
+end
+
+rule "Rule by number of point is > 7"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( points != 0 && points > 7)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 15);
+    	System.out.println(quote.getQuoteAmount() + "// points between 4 and 7 ");
+        //actions
+
+end
+
+rule "Rule by amount of claims < 1000"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( claimOnVehicle != 0 && claimOnVehicle < 1000)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 5);
+    	System.out.println(quote.getQuoteAmount() + "// claims is < 1000");
+        //actions
+
+end
+
+rule "Rule by amount of claims claimOnVehicle 1000 - 5000"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( claimOnVehicle != 0 && claimOnVehicle >= 1000 && claimOnVehicle <= 5000)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 10);
+    	System.out.println(quote.getQuoteAmount() + "// claims is < 1000");
+        //actions
+
+end
+
+rule "Rule by amount of claims claimOnVehicle > 5000"
+    //include attributes such as "salience" here...
+    when
+        $p : CustomerVO( claimOnVehicle != 0 && claimOnVehicle > 5000)
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 15);
+    	System.out.println(quote.getQuoteAmount() + "// claims is < 1000");
+        //actions
+
+end
+
+//Start-Added by CM
+rule "Rule by creditscore >= 800"
+    when
+        $p : CustomerVO( creditScore >= 800 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 2);
+    	System.out.println(quote.getQuoteAmount() + "// creditScore >= 800");
+end
+
+rule "Rule by creditscore between 740-799"
+    when
+        $p : CustomerVO( creditScore >= 740 && creditScore <= 799 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 4);
+    	System.out.println(quote.getQuoteAmount() + "// creditScore between 740-799");
+end
+
+rule "Rule by creditscore between 670-739"
+    when
+        $p : CustomerVO( creditScore >= 670 && creditScore <= 739 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 6);
+    	System.out.println(quote.getQuoteAmount() + "// creditScore between 670-739");
+end
+
+rule "Rule by creditscore between 580-669"
+    when
+        $p : CustomerVO( creditScore >= 580 && creditScore <= 669 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 8);
+    	System.out.println(quote.getQuoteAmount() + "// creditScore between 580-669");
+end
+
+rule "Rule by creditscore <= 579"
+    when
+        $p : CustomerVO( creditScore <= 579 )
+    then
+    	quote.setQuoteAmount(quote.getQuoteAmount() + 10);
+    	System.out.println(quote.getQuoteAmount() + "// creditScore <= 579");
+end
+
+//end
+
+
+function String getQuoteId(){
+	Calendar now = Calendar.getInstance();
+    int year = now.get(Calendar.YEAR);
+    int month = now.get(Calendar.MONTH) + 1;
+    int day =  now.get(Calendar.DATE);
+    Random rand = new Random();
+    String s1 = Integer.toString(year);
+    String s2 = Integer.toString(month);
+    String s3 = Integer.toString(day);
+	return (s1 + s2 + s3 + String.format("%04d", rand.nextInt(10000)));
+	//return "123Assu2016";
+}
+
+
+
